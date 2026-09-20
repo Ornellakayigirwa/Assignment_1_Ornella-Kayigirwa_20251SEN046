@@ -3,7 +3,7 @@
 **Name:** Kayigirwa Ornella  
 **ID:** 20251SEN046  
 **Database Used:** Oracle Database (SQL Developer)  
-**Repository:** Assignment_1_Ornella-Kayigirwa-20251SEN046
+**Repository:** Assignment_1_Ornella-Kayigirwa_20251SEN046
 
  ## *Overview*
 The project involves an analysis of the sales data for Sunrise Supermarket.
@@ -50,10 +50,18 @@ CREATE TABLE order_items (
 );
 ```
 For each table:
-+ At least 5 customers for the customres table
++ At least 5 customers for the customers table
 + At least 8 products across 3 categories in the products table
 + At least 15 orders and Multiple different order dates inside the orders table
 + At least 25 order items in the order_items table
+
+  ## How to Run the Project
+
++ Open Oracle SQL Developer and connect to the database.
++ Run the script that creates the tables (01_schema.sql).
++ Run the script that inserts the sample data (data.sql).
++ Run the analytical queries (JOIN query.sql, CTE.sql and window function.sql).
++ Screenshots of the results are stored in the /screenshots folder of this repository.
 
  ## 2. JOIN QUERIES
   
@@ -123,14 +131,14 @@ WITH customer_total AS (
   WHERE total_spend > (SELECT AVG(total_spend) FROM customer_total)
   ORDER BY total_spend DESC;
 ```
-The CTE customer_totals includes customers, orders, order_items, and products and calculates the sum of quantity * price for each customer.
+The CTE customer_total includes customers, orders, order_items, and products and calculates the sum of quantity * price for each customer.
 The outer query returns only those customers whose total amount is greater than the average of these totals where the average considers 
-only those customerswho made an order.
+only those customers who made an order.
 
 ***Result: 3 customers above the average of 269,000***<img width="1366" height="692" alt="CTE" src="https://github.com/user-attachments/assets/cc9415dd-9189-4f04-a38b-a1435ddf77b7" />
 
-Neila Lysee, Bob Shimwa, and Ines Mutoni are the most valuable customers due to the large number of Acoustic guitar (225,000) purchases they make.
-The management should consider giving them loyalty discounts while Davis and Prince may be considered for promotions.
+Neila Lysee, Bob Shimwa, and Ines Mutoni are the most valuable customers due to each of them bought an Acoustic guitar (225,000), and that one purchase makes up a big share of their spend. 
+Davis and Prince bought none..
 
 
 ## 4. Window Function Queries
