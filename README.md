@@ -138,7 +138,7 @@ only those customers who made an order.
 ***Result: 3 customers above the average of 269,000***<img width="1366" height="692" alt="CTE" src="https://github.com/user-attachments/assets/cc9415dd-9189-4f04-a38b-a1435ddf77b7" />
 
 Neila Lysee, Bob Shimwa, and Ines Mutoni are the most valuable customers due to each of them bought an Acoustic guitar (225,000), and that one purchase makes up a big share of their spend. 
-Davis and Prince bought none..
+Davis and Prince bought none.
 
 
 ## 4. Window Function Queries
